@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/subuta/react-hydrate-example#readme",
   "dependencies": {
+    "common-tags": "^1.8.0",
     "poi": "^10.2.9",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
