@@ -27,14 +27,27 @@ const main = async () => {
   const data = await page.evaluate(() => new Promise((resolve) => {
     window.twttr.events.bind('rendered', (event) => {
       console.log('Created widget', event.target.id)
-      console.log(document.body.outerHTML)
-      resolve()
+
+      const node = document.querySelector(`#${event.target.id}`)
+      const shadowRootHTML = node.shadowRoot.innerHTML
+
+      // clone host node of Twitter card.
+      const cloned = node.cloneNode()
+      // inject serialized shadowRoot to parent.
+      cloned.innerHTML = shadowRootHTML
+
+      const rendered = cloned.outerHTML
+      resolve(rendered)
     })
   }))
 
   await page.screenshot({path: 'example.png'})
 
-  console.log('done!', data, new Date())
+  console.log('=========')
+  console.log(data)
+  console.log('=========')
+
+  console.log('done!', new Date())
 
   await browser.close()
 }
