@@ -20,6 +20,12 @@ twScript.setAttribute('char-set', 'utf-8')
 
 head.appendChild(twScript)
 
+twScript.onload = () => {
+  window.twttr.events.bind('rendered', (event) => {
+    console.log('Created widget', event.target.id)
+  })
+}
+
 const node = document.querySelector('#app')
 
 // ReactDOM.hydrate(<App />, node)

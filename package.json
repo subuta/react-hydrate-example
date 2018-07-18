@@ -4,7 +4,7 @@
   "description": "playground for react-hydrate feature.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "dependencies": {
     "common-tags": "^1.8.0",
     "poi": "^10.2.9",
+    "puppeteer": "^1.6.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   },
