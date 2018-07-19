@@ -1,6 +1,8 @@
 const puppeteer = require('puppeteer')
 const {html} = require('common-tags')
 
+// Bonus SSR example using puppeteer and Twitter JavaScript SDK :)
+
 const main = async () => {
   const browser = await puppeteer.launch()
   const page = await browser.newPage()

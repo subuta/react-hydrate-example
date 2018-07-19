@@ -4,7 +4,8 @@
   "description": "playground for react-hydrate feature.",
   "main": "index.js",
   "scripts": {
-    "render-twitter": "node tweet-renderer.js"
+    "dev": "poi",
+    "render-twitter": "node node-tweet-renderer.js"
   },
   "repository": {
     "type": "git",
@@ -18,10 +19,12 @@
   "homepage": "https://github.com/subuta/react-hydrate-example#readme",
   "dependencies": {
     "common-tags": "^1.8.0",
+    "isomorphic-unfetch": "^2.0.0",
     "poi": "^10.2.9",
     "puppeteer": "^1.6.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1"
+    "react-dom": "^16.4.1",
+    "recompose": "^0.27.1"
   },
   "devDependencies": {
     "react-hot-loader": "^4.3.3"

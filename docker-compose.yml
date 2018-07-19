@@ -1,0 +1,10 @@
+version: '2'
+services:
+  iframely:
+    build:
+      context: ./Dockerfiles/iframely
+      dockerfile: ./Dockerfile
+    ports:
+      - "8061:8061"
+    volumes:
+      - ./Dockerfiles/iframely/config.local.js:/iframely/config.local.js
