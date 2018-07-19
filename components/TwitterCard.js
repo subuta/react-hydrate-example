@@ -36,6 +36,7 @@ let TwitterCard = enhance((props) => {
   )
 })
 
+// Define next.js style getInitialProps for pre-render.
 TwitterCard.getInitialProps = async () => {
   const uri = 'https://twitter.com/Interior/status/463440424141459456'
 

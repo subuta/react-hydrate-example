@@ -1,5 +1,10 @@
 # react-hydrate-example
-playground for react-hydrate feature.
+Playground for React's hydrate feature.
+
+Key things in this repository is ...
+
+- `hydrate` -> https://reactjs.org/docs/react-dom.html#hydrate
+- `renderToString` -> https://reactjs.org/docs/react-dom-server.html#rendertostring
 
 ### How to play
 
