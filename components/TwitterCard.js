@@ -2,8 +2,21 @@ import React from 'react'
 import { hot } from 'react-hot-loader'
 import fetch from 'isomorphic-unfetch'
 
-let TwitterCard = hot(module)((props) => {
+import {
+  compose,
+  withHandlers
+} from 'recompose'
+
+const enhance = compose(
+  hot(module),
+  withHandlers({
+    onClick: () => (e) => console.log('clicked!', e)
+  })
+)
+
+let TwitterCard = enhance((props) => {
   const {
+    onClick,
     meta,
     links
   } = props
@@ -15,7 +28,10 @@ let TwitterCard = hot(module)((props) => {
       <h3>{meta.title}</h3>
       <p>{meta.description}</p>
 
-      <img src={thumbnail.href} alt="" />
+      <img src={thumbnail.href}
+           alt=""
+           onClick={onClick}
+      />
     </div>
   )
 })
