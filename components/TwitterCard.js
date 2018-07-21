@@ -22,6 +22,7 @@ let TwitterCard = enhance((props) => {
   } = props
 
   const thumbnail = links.thumbnail[0]
+  const { width, height } = thumbnail.media
 
   return (
     <div>
@@ -30,6 +31,7 @@ let TwitterCard = enhance((props) => {
 
       <img src={thumbnail.href}
            alt=""
+           style={{height, width}}
            onClick={onClick}
       />
     </div>

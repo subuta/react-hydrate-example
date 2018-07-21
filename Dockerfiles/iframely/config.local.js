@@ -164,8 +164,8 @@
         // allowPTagDescription: true  // to enable description fallback to first paragraph
       },
       images: {
-        loadSize: false, // if true, will try an load first bytes of all images to get/confirm the sizes
-        checkFavicon: false // if true, will verify all favicons
+        loadSize: true, // if true, will try an load first bytes of all images to get/confirm the sizes
+        checkFavicon: true // if true, will verify all favicons
       },
       tumblr: {
         consumer_key: "INSERT YOUR VALUE"
